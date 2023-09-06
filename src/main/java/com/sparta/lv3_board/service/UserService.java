@@ -39,16 +39,15 @@ public class UserService {
             throw new IllegalArgumentException("중복된 사용자가 존재합니다.");
         }
 
-//        // 사용자 ROLE 확인
-//        UserRoleEnum role = UserRoleEnum.USER;
-//        if (requestDto.isAdmin()) {
-//            if (!ADMIN_TOKEN.equals(requestDto.getAdminToken())) {
-//                throw new IllegalArgumentException("admin 번호를 다시 확인해주세요.");
-//            }
-//            role = UserRoleEnum.ADMIN;
-//        }
-//        String authkey = requestDto.getAuthKey();
+        // 사용자 ROLE 확인
         UserRoleEnum role = UserRoleEnum.USER;
+        if (requestDto.isAdmin()) {
+            if (!ADMIN_TOKEN.equals(requestDto.getAdminToken())) {
+                throw new IllegalArgumentException("admin 번호를 다시 확인해주세요.");
+            }
+            role = UserRoleEnum.ADMIN;
+        }
+//        String authkey = requestDto.getAuthKey();
         User user = new User(username, password, role);
         userRepository.save(user);
         // DB에 중복된 username 이 없다면 회원을 저장하고 Client 로 성공했다는 메시지, 상태코드 반환하기
