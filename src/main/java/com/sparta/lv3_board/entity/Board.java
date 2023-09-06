@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Table(name = "board")
@@ -20,9 +23,8 @@ public class Board extends Timestamped{
     @Column(nullable = false)
     private String contents;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @OneToMany(mappedBy = "board")
+    private List<Comment> commentList = new ArrayList<Comment>();
 
 
     public Board(BoardRequestDto requestDto, String username) {
@@ -36,5 +38,9 @@ public class Board extends Timestamped{
 //        this.username =username;
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
+    }
+
+    public void addCommentList(Comment comment) {
+        this.commentList.add(comment);
     }
 }

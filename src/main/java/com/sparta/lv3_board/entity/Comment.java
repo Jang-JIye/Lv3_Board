@@ -1,35 +1,43 @@
 package com.sparta.lv3_board.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sparta.lv3_board.dto.CommentRequestDto;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Entity
 @Getter
-@Setter
-@Table(name="comment")
+@Entity
 @NoArgsConstructor
-@AllArgsConstructor
 public class Comment extends Timestamped {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long commentId;
+    private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String comment;
 
-    @Column
+    @Column(nullable = false)
     private String username;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "board_id")
+    @JoinColumn(name = "post_id", nullable = false)
+    @JsonIgnore
     private Board board;
 
+//    @ManyToOne
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @JsonManagedReference
+//    private User user;
+
+    public Comment(User user, CommentRequestDto commentRequestDto, Board board) {
+        this.board = board;
+        this.username = board.getUsername();
+        this.comment = commentRequestDto.getComment();
+    }
+
+    public void update(CommentRequestDto commentRequestDto) {
+        this.comment = commentRequestDto.getComment();
+    }
 
 }
