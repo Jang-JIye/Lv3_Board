@@ -4,7 +4,6 @@ import com.sparta.lv3_board.dto.BoardRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Getter
@@ -18,18 +17,23 @@ public class Board extends Timestamped{
     private String username;
     @Column(nullable = false)
     private String title;
-    @Column(nullable = false, length = 500)
+    @Column(nullable = false)
     private String contents;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    public Board(BoardRequestDto requestDto) {
-        this.username = requestDto.getUsername();
+
+    public Board(BoardRequestDto requestDto, String username) {
+        this.username = username;
+        this.username = username;
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
     }
 
     public void update(BoardRequestDto requestDto) {
-        this.username = requestDto.getUsername();
+//        this.username =username;
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
     }
