@@ -9,6 +9,8 @@ import com.sparta.lv3_board.jwt.JwtUtil;
 import com.sparta.lv3_board.repository.UserRepository;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,8 +49,10 @@ public class UserService {
             }
             role = UserRoleEnum.ADMIN;
         }
+
+        String encodedPassword = passwordEncoder.encode(requestDto.getPassword());
 //        String authkey = requestDto.getAuthKey();
-        User user = new User(username, password, role);
+        User user = new User(username, encodedPassword, role);
         userRepository.save(user);
         // DB에 중복된 username 이 없다면 회원을 저장하고 Client 로 성공했다는 메시지, 상태코드 반환하기
         UserResponseDto userResponseDto = new UserResponseDto("회원가입 완료", 200);

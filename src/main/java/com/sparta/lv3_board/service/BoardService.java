@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -140,13 +141,13 @@ public class BoardService {
     }
 
     // readAll
-    public List<BoardResponseDto> getBoards() {
-        return boardRepository.findAllByOrderByModifiedAtDesc().stream().map(BoardResponseDto::new).toList();
+    public List<BoardResponseDto> getAllBoards() {
+        return boardRepository.findAllByOrderByModifiedAtDesc().stream().map(BoardResponseDto::new).collect(Collectors.toList());
     }
 
     // read
-    public Board getBoard(Long id, String username) {
-        return findBoard(id);
+    public BoardResponseDto getBoard(Long id, String username) {
+        return new BoardResponseDto(findBoard(id));
     }
 
     // update

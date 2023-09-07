@@ -12,11 +12,97 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/boards")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class BoardController {
-//
+
+    private final BoardService boardService;
+    private final JwtUtil jwtUtil;
+
+//create
+    @PostMapping("/boards")
+    public ResponseEntity<BoardResponseDto> createBoard(
+            @RequestBody BoardRequestDto requestDto, HttpServletRequest request) {
+        // JWT 토큰을 검증하고 게시물 생성
+        String token = jwtUtil.resolveToken(request);
+        if (token != null && jwtUtil.validateToken(token)) {
+            Claims claims = jwtUtil.getUserInfoFromToken(token);
+            String username = claims.getSubject();
+
+            BoardResponseDto responseDto = boardService.createBoard(requestDto, username);
+            return ResponseEntity.ok(responseDto);
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+    }
+
+
+
+//readAll
+    @GetMapping("/boards")
+    public ResponseEntity<List<BoardResponseDto>> getAllBoards(HttpServletRequest request) {
+        // JWT 토큰을 검증하고 모든 게시물 가져오기
+        String token = jwtUtil.resolveToken(request);
+        if (token != null && jwtUtil.validateToken(token)) {
+            List<BoardResponseDto> responseDtoList = boardService.getAllBoards();
+            return ResponseEntity.ok(responseDtoList);
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+    }
+
+
+//read
+    @GetMapping("/boards/{boardId}")
+    public ResponseEntity<BoardResponseDto> getBoard(
+            @PathVariable Long boardId, HttpServletRequest request) {
+        // JWT 토큰을 검증하고 게시물 가져오기
+        String token = jwtUtil.resolveToken(request);
+        if (token != null && jwtUtil.validateToken(token)) {
+            Claims claims = jwtUtil.getUserInfoFromToken(token);
+            String username = claims.getSubject();
+
+            BoardResponseDto  responseDto = boardService.getBoard(boardId, username);
+            return ResponseEntity.ok(responseDto);
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+    }
+
+
+//update
+    @PutMapping("/boards/{boardId}")
+    public ResponseEntity<String> updateBoard(
+            @PathVariable Long boardId, @RequestBody BoardRequestDto requestDto, HttpServletRequest request) {
+        // JWT 토큰을 검증하고 게시물 수정
+        String token = jwtUtil.resolveToken(request);
+        if (token != null && jwtUtil.validateToken(token)) {
+            Claims claims = jwtUtil.getUserInfoFromToken(token);
+            String username = claims.getSubject();
+
+            ResponseEntity<String> response = boardService.updateBoard(boardId, requestDto, username);
+            return response;
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인이 필요합니다.");
+    }
+
+
+//delete
+    @DeleteMapping("/boards/{boardId}")
+    public ResponseEntity<String> deleteBoard(
+            @PathVariable Long boardId, HttpServletRequest request) {
+        // JWT 토큰을 검증하고 게시물 삭제
+        String token = jwtUtil.resolveToken(request);
+        if (token != null && jwtUtil.validateToken(token)) {
+            Claims claims = jwtUtil.getUserInfoFromToken(token);
+            String username = claims.getSubject();
+
+            ResponseEntity<String> response = boardService.deleteBoard(boardId, username);
+            return response;
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인이 필요합니다.");
+    }
+    //
 //
 //    private final BoardService boardService;
 //
@@ -65,70 +151,5 @@ public class BoardController {
 //            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 //        }
 //    }
-
-
-    private final BoardService boardService;
-    private final JwtUtil jwtUtil;
-
-
-    @PostMapping
-    public ResponseEntity<BoardResponseDto> createBoard(
-            @RequestBody BoardRequestDto requestDto, HttpServletRequest request) {
-        // JWT 토큰을 검증하고 게시물 생성
-        String token = jwtUtil.resolveToken(request);
-        if (token != null && jwtUtil.validateToken(token)) {
-            Claims claims = jwtUtil.getUserInfoFromToken(token);
-            String username = claims.getSubject();
-
-            BoardResponseDto responseDto = boardService.createBoard(requestDto, username);
-            return ResponseEntity.ok(responseDto);
-        }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
-    }
-
-    @GetMapping("/{boardId}")
-    public ResponseEntity<Board> getBoard(
-            @PathVariable Long boardId, HttpServletRequest request) {
-        // JWT 토큰을 검증하고 게시물 가져오기
-        String token = jwtUtil.resolveToken(request);
-        if (token != null && jwtUtil.validateToken(token)) {
-            Claims claims = jwtUtil.getUserInfoFromToken(token);
-            String username = claims.getSubject();
-
-            Board responseDto = boardService.getBoard(boardId, username);
-            return ResponseEntity.ok(responseDto);
-        }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
-    }
-
-    @PutMapping("/{boardId}")
-    public ResponseEntity<String> updateBoard(
-            @PathVariable Long boardId, @RequestBody BoardRequestDto requestDto, HttpServletRequest request) {
-        // JWT 토큰을 검증하고 게시물 수정
-        String token = jwtUtil.resolveToken(request);
-        if (token != null && jwtUtil.validateToken(token)) {
-            Claims claims = jwtUtil.getUserInfoFromToken(token);
-            String username = claims.getSubject();
-
-            ResponseEntity<String> response = boardService.updateBoard(boardId, requestDto, username);
-            return response;
-        }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인이 필요합니다.");
-    }
-
-    @DeleteMapping("/{boardId}")
-    public ResponseEntity<String> deleteBoard(
-            @PathVariable Long boardId, HttpServletRequest request) {
-        // JWT 토큰을 검증하고 게시물 삭제
-        String token = jwtUtil.resolveToken(request);
-        if (token != null && jwtUtil.validateToken(token)) {
-            Claims claims = jwtUtil.getUserInfoFromToken(token);
-            String username = claims.getSubject();
-
-            ResponseEntity<String> response = boardService.deleteBoard(boardId, username);
-            return response;
-        }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인이 필요합니다.");
-    }
 }
 
