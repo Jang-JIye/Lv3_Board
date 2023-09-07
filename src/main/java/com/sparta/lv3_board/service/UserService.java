@@ -71,7 +71,7 @@ public class UserService {
         }
         //로그인 성공
         //JWT Token 생성 및 쿠키에 저장
-        String token = jwtUtil.createToken(user.getUsername());
+        String token = jwtUtil.createToken(user.getUsername(), user.getRole());
         //Response 객체에 추가,
         jwtUtil.addJwtToCookie(token, httpServletResponse);
 

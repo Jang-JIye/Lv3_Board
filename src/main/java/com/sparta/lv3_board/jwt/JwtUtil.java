@@ -1,6 +1,7 @@
 package com.sparta.lv3_board.jwt;
 
 
+import com.sparta.lv3_board.entity.UserRoleEnum;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
@@ -69,12 +70,13 @@ public class JwtUtil {
     }
 
     //토큰 생성
-    public String createToken(String username) {
+    public String createToken(String username, UserRoleEnum role) {
         Date date = new Date();
 
         return BEARER_PREFIX +
                 Jwts.builder()
                         .setSubject(username) // 사용자 식별값 (id)
+                        .claim("role", role.toString()) // 사용자 역할 정보 추가
                         .setIssuedAt(date) // 발급일
                         .setExpiration(new Date(date.getTime()+TOKEN_TIME)) // 만료 시간
                         .signWith(key, signatureAlgorithm) //암호화 알고리즘
