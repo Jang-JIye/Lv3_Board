@@ -9,8 +9,6 @@ import com.sparta.lv3_board.jwt.JwtUtil;
 import com.sparta.lv3_board.repository.UserRepository;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,27 +34,32 @@ public class UserService {
         String password = passwordEncoder.encode(requestDto.getPassword());
 
         // 유저 중복확인
-        Optional<User> checkUsername = userRepository.findByUsername(username);
-        if (checkUsername.isPresent()) {
+        if (userRepository.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("중복된 사용자가 존재합니다.");
         }
 
-        // 사용자 ROLE 확인
-        UserRoleEnum role = UserRoleEnum.USER;
-        if (requestDto.isAdmin()) {
-            if (!ADMIN_TOKEN.equals(requestDto.getAdminToken())) {
-                throw new IllegalArgumentException("admin 번호를 다시 확인해주세요.");
-            }
-            role = UserRoleEnum.ADMIN;
+        /// 사용자 ROLE 확인
+        UserRoleEnum role = UserRoleEnum.USER; // 기본값은 USER
+
+        if (requestDto.getAdminToken() != null && ADMIN_TOKEN.equals(requestDto.getAdminToken())) {
+            role = UserRoleEnum.ADMIN; // adminToken이 제공되면 ADMIN으로 설정
         }
 
         String encodedPassword = passwordEncoder.encode(requestDto.getPassword());
-//        String authkey = requestDto.getAuthKey();
         User user = new User(username, encodedPassword, role);
         userRepository.save(user);
+
         // DB에 중복된 username 이 없다면 회원을 저장하고 Client 로 성공했다는 메시지, 상태코드 반환하기
         UserResponseDto userResponseDto = new UserResponseDto("회원가입 완료", 200);
         return userResponseDto;
+    }
+    //ADMIN_TOKEN 확인하기
+    private UserRoleEnum validateAdminToken(String adminToken) {
+        if (ADMIN_TOKEN.equals(adminToken)) {
+            return UserRoleEnum.ADMIN;
+        } else {
+            throw new IllegalArgumentException("admin 토큰을 다시 확인하세요.");
+        }
     }
 
 
