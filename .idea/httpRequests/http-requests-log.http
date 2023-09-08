@@ -1,0 +1,448 @@
+DELETE http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T174431.200.txt
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T174424.200.json
+
+###
+
+DELETE http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T174100.200.json
+
+###
+
+DELETE http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173527.200.json
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173516.200.json
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173509.200.json
+
+###
+
+DELETE http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+DELETE http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 2,
+  "comment" : "this is comment1"
+}
+
+<> 2023-09-08T173427.201.json
+
+###
+
+POST http://localhost:8080/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "comment" : "this is comment1"
+}
+
+###
+
+GET http://localhost:8080/api/boards/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173410.200.json
+
+###
+
+GET http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "comment" : "this is comment1"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 65
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title",
+  "contents" : "this is content"
+}
+
+<> 2023-09-08T173357.200.json
+
+###
+
+DELETE http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173347.200.txt
+
+###
+
+DELETE http://localhost:8080/api/comments/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173340.200.json
+
+###
+
+GET http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T173302.200.json
+
+###
+
+PUT http://localhost:8080/api/comments/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "comment" : "this is changed"
+}
+
+<> 2023-09-08T173252.200.json
+
+###
+
+POST http://localhost:8080/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "comment" : "this is comment1"
+}
+
+<> 2023-09-08T173209.201.json
+
+###
+
+POST http://localhost:8080/api/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "contents" : "this is comment1"
+}
+
+###
+
+POST http://localhost:8080/api/comment
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "contents" : "this is comment1"
+}
+
+###
+
+PUT http://localhost:8080/api/comment
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "boardId" : 1,
+  "contents" : "this is changed"
+}
+
+###
+
+GET http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T172910.200.json
+
+###
+
+GET http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-08T172512.200.json
+
+###
+
+GET http://localhost:8080/api/boards/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PUT http://localhost:8080/api/boards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 81
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title_changed",
+  "contents" : "this is content_changed"
+}
+
+<> 2023-09-08T172413.200.txt
+
+###
+
+POST http://localhost:8080/api/boards
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 65
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title",
+  "contents" : "this is content"
+}
+
+<> 2023-09-08T172402.200.json
+
+###
+
+POST http://localhost:8080/api/boards
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJybGFmbHM5NSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjk0MTY0OTA0LCJpYXQiOjE2OTQxNjEzMDR9.ATXavBiDR7CEbzw2NkNOv83cbn_ilOUuo6gYVzERQxQ
+Content-Type: application/json
+Content-Length: 64
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title",
+  "content" : "this is content"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Authorization: {{token}}
+Content-Type: application/json
+Content-Length: 64
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title",
+  "content" : "this is content"
+}
+
+###
+
+POST http://localhost:8080/api/boards
+Authorization: {{token}}
+Content-Type: application/json
+Content-Length: 64
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title" : "this is title",
+  "content" : "this is content"
+}
+
+###
+
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/user/signup
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+<> 2023-09-08T172138.200.json
+
+###
+
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+<> 2023-09-08T172118.401.txt
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+Content-Length: 54
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+###
+
