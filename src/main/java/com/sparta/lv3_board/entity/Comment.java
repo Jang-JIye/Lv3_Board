@@ -26,11 +26,6 @@ public class Comment extends Timestamped {
     @JsonIgnore
     private Board board;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_id", nullable = false)
-//    @JsonManagedReference
-//    private User user;
-
     public Comment(String username, CommentRequestDto commentRequestDto, Board board) {
         this.board = board;
         this.username = username;

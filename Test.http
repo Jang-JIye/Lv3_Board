@@ -1,0 +1,72 @@
+### User Signup
+POST http://localhost:8080/api/user/signup
+Content-Type: application/json
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+### User Login
+POST http://localhost:8080/api/user/login
+Content-Type: application/json
+
+{
+  "username": "rlafls95",
+  "password": "password"
+}
+
+### Post Insert
+POST http://localhost:8080/api/boards
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "title" : "this is title",
+  "contents" : "this is content"
+}
+
+### Post update
+PUT http://localhost:8080/api/boards/1
+Authorization: {{token}}
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "title" : "this is title_changed",
+  "contents" : "this is content_changed"
+}
+
+### GET Post
+GET http://localhost:8080/api/boards/2
+Authorization: {{token}}
+
+### Comment insert
+POST http://localhost:8080/api/comments
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "boardId" : 2,
+  "comment" : "this is comment1"
+}
+
+### Comment update
+PUT http://localhost:8080/api/comments/1
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "comment" : "this is changed"
+}
+
+###  Comment Delete
+DELETE http://localhost:8080/api/comments/1
+Authorization: {{token}}
+
+### Post Delete
+DELETE http://localhost:8080/api/boards/2
+Authorization: {{token}}
+
+### Swagger Access
+GET http://localhost:8080/swagger-ui/index.html

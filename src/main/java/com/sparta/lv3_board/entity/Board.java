@@ -23,13 +23,12 @@ public class Board extends Timestamped{
     @Column(nullable = false)
     private String contents;
 
-    @OneToMany(mappedBy = "board", fetch = FetchType.EAGER)
-    private List<Comment> comment = new ArrayList<>();
+    @OneToMany(mappedBy = "board", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Comment> comments = new ArrayList<>();
 
 
 
     public Board(BoardRequestDto requestDto, String username) {
-//        this.username = username;
         this.username = username;
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();
@@ -42,6 +41,6 @@ public class Board extends Timestamped{
     }
 
     public void addCommentList(Comment comment) {
-        this.comment.add(comment);
+        this.comments.add(comment);
     }
 }

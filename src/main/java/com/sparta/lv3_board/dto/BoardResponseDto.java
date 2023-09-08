@@ -5,6 +5,8 @@ import com.sparta.lv3_board.entity.Board;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 public class BoardResponseDto {
@@ -15,6 +17,8 @@ public class BoardResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
 
+    private List<CommentResponseDto> commentList = new ArrayList<>();
+
     public BoardResponseDto(Board board) {
         this.id = board.getId();
         this.title = board.getTitle();
@@ -22,5 +26,6 @@ public class BoardResponseDto {
         this.contents = board.getContents();
         this.createdAt = board.getCreatedAt();
         this.modifiedAt = board.getModifiedAt();
+        this.commentList = board.getComments().stream().map(CommentResponseDto::new).toList();
     }
 }

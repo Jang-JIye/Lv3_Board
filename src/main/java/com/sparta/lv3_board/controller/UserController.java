@@ -20,17 +20,10 @@ import java.io.IOException;
 public class UserController {
 
     private final UserService userService;
-
-        //회원 가입
+    //회원 가입
     @PostMapping("/user/signup")
     public UserResponseDto signup(@RequestBody SignupRequestDto requestDto,HttpServletResponse httpServletResponse) {
         return userService.signup(requestDto);
     }
 
-
-    //로그인
-    @PostMapping("/user/login")
-    public UserResponseDto login(@RequestBody LoginRequestDto requestDto, HttpServletResponse httpServletResponse) throws IOException {
-        return userService.login(requestDto, httpServletResponse);
-    }
 }
