@@ -15,23 +15,23 @@ import org.springframework.web.bind.annotation.*;
 public class CommentController {
 
     private final CommentService commentService;
-    private final JwtUtil jwtUtil;
+//    private final JwtUtil jwtUtil;
 
     // create-Comment
-    @PostMapping("/comments")
-    public CommentResponseDto createComment(@PathVariable Long id, @RequestBody CommentRequestDto commentRequestDto, HttpServletRequest httpServletRequest) {
-        return commentService.createComment(id, commentRequestDto, httpServletRequest);
+    @PostMapping("/comments/{boardId}")
+    public CommentResponseDto createComment(@PathVariable Long boardId, @RequestBody CommentRequestDto commentRequestDto, HttpServletRequest httpServletRequest) {
+        return commentService.createComment(boardId, commentRequestDto, httpServletRequest);
     }
 
     // update-Comment
     @PutMapping("/comments/{commentId}")
-    public CommentResponseDto updateComment(@PathVariable Long id, @RequestBody CommentRequestDto commentRequestDto, HttpServletRequest httpServletRequest) {
-        return commentService.updateComment(id, commentRequestDto, httpServletRequest);
+    public CommentResponseDto updateComment(@PathVariable Long commentId, @RequestBody CommentRequestDto commentRequestDto, HttpServletRequest httpServletRequest) {
+        return commentService.updateComment(commentId, commentRequestDto, httpServletRequest);
     }
 
     // delete-Comment
     @DeleteMapping("/comments/{commentId}")
-    public UserResponseDto deleteComment(@PathVariable Long id, HttpServletRequest httpServletRequest) {
-        return commentService.deleteComment(id, httpServletRequest);
+    public UserResponseDto deleteComment(@PathVariable Long commentId, HttpServletRequest httpServletRequest) {
+        return commentService.deleteComment(commentId, httpServletRequest);
     }
 }

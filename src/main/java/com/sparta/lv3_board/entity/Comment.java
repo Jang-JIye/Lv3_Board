@@ -1,5 +1,6 @@
 package com.sparta.lv3_board.entity;
 
+import ch.qos.logback.core.net.SMTPAppenderBase;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sparta.lv3_board.dto.CommentRequestDto;
 import jakarta.persistence.*;
@@ -21,7 +22,7 @@ public class Comment extends Timestamped {
     private String username;
 
     @ManyToOne
-    @JoinColumn(name = "post_id", nullable = false)
+    @JoinColumn(name = "board_id", nullable = false)
     @JsonIgnore
     private Board board;
 
@@ -30,9 +31,9 @@ public class Comment extends Timestamped {
 //    @JsonManagedReference
 //    private User user;
 
-    public Comment(User user, CommentRequestDto commentRequestDto, Board board) {
+    public Comment(String username, CommentRequestDto commentRequestDto, Board board) {
         this.board = board;
-        this.username = board.getUsername();
+        this.username = username;
         this.comment = commentRequestDto.getComment();
     }
 

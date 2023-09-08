@@ -36,7 +36,7 @@ public class CommentService {
                 () -> new IllegalArgumentException("게시글이 존재하지 않습니다.")
         );
 
-        Comment comment = new Comment(user, commentRequestDto, board);
+        Comment comment = new Comment(user.getUsername(), commentRequestDto, board);
         Comment saveComment = commentRepository.save(comment);
 
         return new CommentResponseDto(saveComment);
